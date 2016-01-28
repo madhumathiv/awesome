@@ -1,0 +1,7 @@
+git config --global user.email "madhumathiv@yahoo.com"
+echo "# awesome" >> README.md
+git init
+git add README.md
+git commit -m "first commit”
+git remote add origin https://github.com/madhumathiv/awesome.git
+git push -u origin master
