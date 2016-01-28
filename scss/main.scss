@@ -1,0 +1,61 @@
+$primary-color: #333;
+
+
+@mixin border-radius($radius) {
+
+          border-radius: $radius;
+}
+
+h1 { @include border-radius(10px); }
+
+.box {display:flex;
+	border-radius :10px;
+
+}
+
+h1 { border: 1px solid black;
+	color: $primary-color;
+	font: Helvetica, sans-serif;
+}
+
+a { border: 1px solid black;
+	color: $primary-color;
+	font: Helvetica, sans-serif;
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
+}
+
+.error {
+  @extend .message;
+  border-color: red;
+}
+
+.warning {
+  @extend .message;
+  border-color: yellow;
+}
